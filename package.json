@@ -1,0 +1,64 @@
+{
+  "name": "stylus2scss-experimental",
+  "displayName": "stylus2scss-experimental",
+  "description": "Experimental transform Stylus to SCSS",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publisher": "ryotamannari",
+  "icon": "icon/256.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manse/stylus2scss-experimental.git"
+  },
+  "galleryBanner": {
+    "color": "#ffffff"
+  },
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "stylus",
+    "scss",
+    "transform",
+    "convert"
+  ],
+  "activationEvents": [
+    "onCommand:extension.stylus2scss-experimental"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.stylus2scss-experimental",
+        "title": "Transform Stylus to SCSS"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "@types/prettier": "^1.13.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6"
+  },
+  "dependencies": {
+    "@types/stylus": "^0.48.30",
+    "prettier": "^1.14.0",
+    "stylus": "^0.54.5"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  }
+}
